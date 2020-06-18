@@ -1,0 +1,688 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\rightmargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Wizja (zad 1)
+\end_layout
+
+\begin_layout Standard
+Komunikacja miejska jest ekologicznym i przyszłościowym sposobem przemieszczania
+ się.
+ Niestety komunikacja publiczna jest również skomplikowanym systemem i korzystan
+ie z niej jest trudniejsze niż użycie własnego samochodu.
+ Wybór najlepszego autobusu by dostać się do miejsca A do miejsca B jest
+ zadaniem zbyt żmudnym, z którym żaden użytkownik nie chce mierzyć się bez
+ wsparcia systemu komputerowego.
+\end_layout
+
+\begin_layout Standard
+Zbudujemy system komputerowy na zlecenie Przedsiębiorstwa komunikacji miejskiej.
+ System ten zbierał będzie i analizował informacje o taborze, trasach, liniach,
+ kierowcach( o czasie ich pracy) oraz zaplanowanych trasach.
+\end_layout
+
+\begin_layout Standard
+System ten będzie służył wielu rodzajom użytkowników.
+\end_layout
+
+\begin_layout Standard
+System umożliwi pasażerom na zaplanowanie swojej trasy.
+ Skorzystają oni z strony internetowej by podać początek planowanej trasy,
+ jej koniec oraz czas oczekiwanego dojazdu.
+ System ten podczas planowania podrózy wykorzysta nie tylko rozkład jazdy
+ autobusów, lecz także dla połączeń odbywających się w najbliższej przyszłości
+ (w ciągu 20 minut) skorzysta z chwilowych położeń autobusów.
+ Dzięki temu nawet jeśli autobus będzie opóźniony pasażer może uniknąć czekania
+ na przystanku, lub skorzystać z innego opóźnionego autobusu, który akurat
+ zbliży się do jego przystanku.
+\end_layout
+
+\begin_layout Standard
+Oprócz witryny internetowej na symym przystanku pasażer korzystać może z
+ elektronicznego wyświetlacza, który pokazuje 10 najbliższych przyjazdów
+ autobusów.
+ Wyświetlacze te, tak jak witryna, korzystają dla odpowiednio bliskich w
+ czasie przyjazdów z aktualnych położeń autobusów.
+\end_layout
+
+\begin_layout Standard
+System umożliwia nie tylko planowanie podrózy pasażera, lecz także wspomaga
+ planowanie rozkładu jazdy.
+ Pracownicy Przedsiębiorstwa mogą manualnie wybrać trasę i poznać jej odległość.
+ W przyszłości możliwe będzie również wykorzystanie informacji o korkach
+ oraz statystyk spóźnień autobusów do planowania i zmieniania rozkładów.
+\end_layout
+
+\begin_layout Standard
+Pracownicy przedsiębiorstwa będą mieli również możliwość używania wszystkich
+ danych zebranych przez system, co może im imożliwić podjęcie dobrych decyzji
+ biznesowych.
+ Informacje o położeniach autobusów oraz o prowadzących je kierowcach są
+ zapisywane co 5 minut do archiwum.
+ Kierowcy przy rozpoczęciu pracy korzystają z wbudowanego w autobus urządzenia
+ android by się zarejestrować.
+ Umożliwia to sprawdzenie czasu pracy kierowców.
+\end_layout
+
+\begin_layout Standard
+System pozwoli również zwiększyć bezpieczeństwo pasażerów.
+ Aktualizowane co co najwyżej 5 minut informacje o chwilowych położeniach
+ wszystkich autobusów mogą być udostępnione policji, co umożliwi sprawniejsze
+ zareagowanie w sytuacji gdy dochodzi do przestępstwa w autobusie, lub gdy
+ występuje niebezpieczeństwo ataku terrorystycznego na któryś z autobusów.
+ W przyszłości zaimplementujemy możliwość uruchomienia alarmu, który automatyczn
+ie przesyłał będzie łaczył się z policją i przekaże obraz i dźwięk z autobusu.
+\end_layout
+
+\begin_layout Standard
+Utworzony system znacząco ułatwi korzystanie z komunikacji miejskiej pasażerom.
+ Zwiększy również ich bezpieczeństwo oraz sprawi, że rozkłady będą lepiej
+ zaplanowane, zaś kierowcy lepiej rozliczani z swej pracy.
+ System będzie również skalowany i niezawodny.
+\end_layout
+
+\begin_layout Standard
+———————————————————————————————————————————————————————-
+\end_layout
+
+\begin_layout Section
+Funkcjonalność (zad 2)
+\end_layout
+
+\begin_layout Standard
+Aplikacja umożliwia pracownikom przedsiębiorstwa komunikacji miejskiej edycję
+ planów wyświetlanych tresci w telewizorach autobusów przedsiębiorstwa.
+\end_layout
+
+\begin_layout Standard
+Do każdego autobusu przypisany może być maksymalnie jeden plan.
+ Plan składa się z wielu treści.
+ Każda treść jest informacyjna (informacje, ciekawostki) lub jest reklamą.
+ Dodatkowo treść może być tekstowa (jest wówczas wyświetlana na pasku telewizora
+) lub może być treścią video.
+ Treści video i tekstowe mogą wyświetlać się jednocześnie.
+\end_layout
+
+\begin_layout Standard
+Aplikacja umożliwia następujące funkcjonalności:
+\end_layout
+
+\begin_layout Itemize
+Aplikacja umożliwia przeglądanie chwilowo wprowadzonych do systemu treści.
+ Jeśli pracownik na głownej stronie kliknie odpowiedni przycisk pokaże mu
+ się lista wszystkich treści wprowadzonych do systemu.
+ Każda treść ma unikalną nazwę, wyświetlona jest również informacja czy
+ to treść informacyjna czy reklamowa, oraz czy jest to treść video czy tekstowa.
+ Kliknięcie na element listy przenosi użytkownika na stronę wyświetlającą
+ samą treść (video lub tekstową).
+\end_layout
+
+\begin_layout Itemize
+Możliwe jest również wprowadzenie nowych treści.
+ W tym celu na stronie głównej klikamy odpowiedni przycisk, zostajemy poproszeni
+ o plik z treścią.
+ Na podstawie rozszerzenia decydowane jest czy jest to treść video czy tekstowa,
+ następnie wprowadzamy nazwę treści oraz zaznaczamy czy jest ona reklamom.
+ 
+\end_layout
+
+\begin_layout Itemize
+Aplikacja umożliwia również wyświetlenie planów wyświetlania.
+ Po kliknięciu na odpowiedni przycisk na stronie głównej wyświetlona zostanie
+ lista planów, każdy plan ma nazwę.
+ Kliknięcie na plan przenosi do strony planu.
+ Wyświetlona jest nazwa planu, maksymalny procent reklam w planie oraz lista
+ gdzie wyświetlone są treści tego planu jako lista.
+ Każdy element takiej listy treści składa się z nazwy tej treści, jej rodzaju
+ (informacyjna czy reklamowa, tekstowa czy audio).
+ Obok każdego elementu listy znajduje się waga tej treści, oraz prawdopodobieńst
+wo wyświetlenia tej treści obliczone na podstawie wagi.
+ Prawdopodobieństwo to jest obliczone w następujący sposób: dla każdego
+ sposobu wyświetlania (tekst lub video) przyjmujemy, że łaczne prawdopodobieństw
+o wyświetlenia elementów informacyjnych to 100% - procent wyświetlanch reklam,
+ zaś prawdopodobieńśtwo wyświetlenia reklamy to procent wyświetlanych reklam.
+ Następnie treści mogące się w danym momencie wyświetlać dzielą się czasem
+ proporcjonalnie do wag (na przykład jeśli mamy dwie tekstowa informacyjne
+ treści o wagach 1, które danego dnia mogą się wyświetlić, zaś procent reklam
+ to 40%, to każda z tekstowych informacyjnych tekstowych treści dostanie
+ 30% czasu paska u dołu ekranu).
+ Dodatkowo każdy element listy treści zawiera przedział dni w których treść
+ będzie wyświetlana.
+ Treści które obecnie nie są wyświetlane znajdują się na końcu listy i zaznaczon
+e są szarym kolorem.
+\end_layout
+
+\begin_layout Itemize
+Można tworzyć nowe plany wyświetlania.
+ Na stronie listy planów zaznaczamy dodaj plan, podajemy jego nazwę i procent
+ reklam.
+ Początkowo plan jest pusty.
+\end_layout
+
+\begin_layout Itemize
+Plany wyświetlania mogą być również kopiowane.
+ Na stronie wyświetlającej listę planów wybieramy przycisk kopiuj, następnie
+ wybieramy element listy, po czym wprowadzamy nazwę skopiowanego planu.
+ Plany są teraz niezależne i mogą być oddzielnie modyfikowane.
+\end_layout
+
+\begin_layout Itemize
+Aplikacja umożliwia również edycję sposobu wyświetlania treści elementów
+ planu.
+ W tym celu na stronie planu należy kliknąć na przycisk edycji, wówczas
+ znikają prawdopodobieńśtwa i można zmienić wagi w listach oraz procent
+ wyświetlanych reklam.
+ Można również wówczas zmienić przedział dni w którym wyświetlane są treści.
+ Kliknięcie na przycisk zakończenie edycji zapisze zmiany.
+\end_layout
+
+\begin_layout Itemize
+Aplikacja umożliwia również wyświetlenie stanu przypisania planów do tras.
+ Kliknięcie na odpowiedni przycisk na stronie głównej wyświetli listę tras.
+ Wyświetlony zostanie numer trasy oraz nazwa planu (lub brak jeśłi plan
+ nie jest przypisany).
+ Kliknięcie na plan przenosi do strony planu.
+\end_layout
+
+\begin_layout Itemize
+Możliwe jest edytowanie przypisania planów do treści.
+ W tym celu na stronie wyświetlającej treści klikamy przycisk edycji, wówczas
+ w pozycjach listy tras przypisane plany zastąpione zostaną dropdownami.
+ Jeśli dla danej trasy był już wybrany plan to jest to zaznczona opcja w
+ dropdownie.
+ Kliknięcie na przycisk zakończenia edycji zapisuje zmiany.
+\end_layout
+
+\begin_layout Itemize
+Możliwe jest również dodawanie treści do planów.
+ W tym celu należy na sronie głównej wybrać odpowiedni przycisk.
+ Wyświetli się lista treści (taka jak opisana powyżej) oraz lista planów
+ (taka jak opisana powyżej, tylko bez możliwości edycji).
+ Można klikając zaznaczyć kilka planów oraz kilka treści.
+ Za kazdym razem gdy zaznaczamy treść jesteśmy proszeni o jej wagę oraz
+ przedział dni.
+ Zakończenie edycji spowoduje, że wszystkie zaznaczone treści z wprowadzonymi
+ wagami oraz przedziałami dni dołaczone zostaną do planów.
+ Jeśli już były wcześniej w planie to zastępują wcześniejszą pozycję.
+\end_layout
+
+\begin_layout Itemize
+W analogiczny sposób można także usuwać elementy z planów.
+ Znów wyświetli się lista planów i lista treści.
+ Zaznaczamy treści oraz plany.
+ Po zakończeniu edycji zaznaczone treści zostaną usunięte z zaznaczonych
+ planów (o ile w nich się znajdowały).
+\end_layout
+
+\begin_layout Section
+Przypadki użycia
+\end_layout
+
+\begin_layout Subsection
+1
+\end_layout
+
+\begin_layout Standard
+Pracownik dowiaduje się, że należy wyświetlić ważną informację na temat
+ ataku terrorystycznego we wszystkich autobusach, które mają jakiś plan
+ wyświetlania.
+ W tym celu pracownik najpierw wprowadza tekstową treść do systemu.
+ Przy wprowadzaniu nazywa ja 
+\begin_inset Quotes eld
+\end_inset
+
+ATAK
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Następnie przechodzi do strony dodawania treści do planów.
+ W liście treści zaznacza 
+\begin_inset Quotes eld
+\end_inset
+
+ATAK
+\begin_inset Quotes erd
+\end_inset
+
+, a następnie zaznacza po kolei wszystkie plany.
+ Gdy zaznaczał treść 
+\begin_inset Quotes eld
+\end_inset
+
+ATAK
+\begin_inset Quotes erd
+\end_inset
+
+ wpsiał, że treść ma wagę 100 (przyjmujemy, że waga 100 to bardzo wysoka
+ waga), zaś przedział dni to tylko dzisiejszy dzień.
+ Po zakończeniu edycji pracownik osiągnął swój cel.
+\end_layout
+
+\begin_layout Subsection
+2
+\end_layout
+
+\begin_layout Standard
+Pracownik senior zauważył, że w niektórych autobusach wyświetla się lek
+ na prsotatę, którego producent nie zapłacił za czas telewizora.
+ Okazuje się, że jest to błąd stazysty, który dodał reklamę do pewnych planów,
+ lecz nie pamięta jakich.
+ Pracownik senior przechodzi do strony usuwania elementów z planów.
+ Na liście treści zaznacza lek na prostatę, zaś na liscie planów zaznacza
+ wszystkie plany.
+ Po zakończeniu edycji senior osiąga swój cel, to jest stan jest dokładnie
+ taki jak przed błedem stażysty.
+\end_layout
+
+\begin_layout Subsection
+3
+\end_layout
+
+\begin_layout Standard
+Przedsiębiorstwo ma chwilowo tylko jeden plan, przypisany do wszystkich
+ autobusów.
+ Trzeba wyświetlać pewną nową reklamę we wszystkich trasach oprócz jednej
+ trasy 53, która przechodzi przez dzielnicę która bardzo obraziła by na
+ przedsiębiorstwo za tą reklamę.
+ W tym celu obecny plan o nazwie 
+\begin_inset Quotes eld
+\end_inset
+
+obecny
+\begin_inset Quotes erd
+\end_inset
+
+ zostaje skopiowany, kopia nazwa zostaje 
+\begin_inset Quotes eld
+\end_inset
+
+kopia
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Następnie pracownik przechodzi do strony listy tras i przypisuje tej wyjątkowje
+ trasie plan 
+\begin_inset Quotes eld
+\end_inset
+
+kopia
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Następnie przechodzimy do strony dodawania treści do planów i tam dodajemy
+ nową reklamę do planu 
+\begin_inset Quotes eld
+\end_inset
+
+obecny
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Na końcu reklama wyświetla się we wszystkich trasach oprócz trasy 53.
+\end_layout
+
+\begin_layout Section
+komunikacja z uet
+\end_layout
+
+\begin_layout Standard
+System centralny zleca wykonanie, natomiast system uet wysyła co zostało
+ wykonane.
+\end_layout
+
+\begin_layout Standard
+każdy komunikat ma swój losowy numer, na każdy komunikat trzeba odpowiedzieć
+ 
+\begin_inset Quotes eld
+\end_inset
+
+ok numer
+\begin_inset Quotes erd
+\end_inset
+
+ gdzie numer to ten numer na który odpowiadamy.
+ Jełśi nie było odpowiedzi trzeba ponawiać transmisję.
+ Nie piszę dalej o tych numerach by nie marnować miejsca.
+\end_layout
+
+\begin_layout Standard
+Są również przesyłane numerki kolejne, która to z kolei wysłana wiadomość.
+ Dzięki temu wiadomości można obsługiwać sobie w kolejności zgodnej z kolejności
+ą wysłania, a nie kolejnością odebrania.
+ Znów o tym dalej nie piszę, ale zakładam, że obrabiamy wiadomości w kolejności
+ w jakiej były wysłane.
+\end_layout
+
+\begin_layout Standard
+Każda wiadomość z centralnego do uet ma także numer autobusu (na stałe przypisan
+ego do uet) oraz numer trasy którego się tyczy (by było wiadomo kto ma na
+ nią odpowiedzieć)
+\end_layout
+
+\begin_layout Subsection
+z centralnego do uet:
+\end_layout
+
+\begin_layout Itemize
+nowa treść.
+ Przesyłana jest treść tej nowej treści, czy jest tekstowa czy video.
+ Nie przsyłąna jest czy jest to reklama.
+ Jest przesyłana też jej nazwa.
+\begin_inset Newline newline
+\end_inset
+
+Taka nowa treść początkowo ma prawdopodobieńśtwo wyświetlenia 0.
+\end_layout
+
+\begin_layout Itemize
+usuń treść.
+ Przesyłana jest nazwa treści do usunięcia.
+ Będzie tak, że ta wiadomość będzie wysłana jedynie wówczas, gdy prawdopodobieńś
+two tej treści wynosi 0.
+\end_layout
+
+\begin_layout Itemize
+zmień prawdopodobieństwa.
+ Przesłana jest lista zawierająca nazwe oraz nowe prawdopodobieństwo.
+ Przesłane są wszystkie nazwy i dokładnie te nazwy, które teraz są treściami
+ zarejestrowanymi w autobusie.
+ prawdopodobieńśtwa przesłane sumują się do 1( to znaczy treści tekstowe
+ sumują się do 1, i treści video też sumują się do 1)
+\end_layout
+
+\begin_layout Subsection
+z uet do centralnego:
+\end_layout
+
+\begin_layout Itemize
+wyemitowano.
+ Tutaj jest podana nazwa treści która została wyemitowana.
+\end_layout
+
+\begin_layout Subsection
+Trasy a autobusy
+\end_layout
+
+\begin_layout Standard
+Jeden autobus prawdopodobnie używany jest w wielu trasach.
+ Dla każdej trasy takiej, że centrala pisała do niego coś o tej trasie trzyma
+ stan właściwy dla tej trasy.
+ I po prostu jak jedzie jako autobus tej trasy to wyświetla treści związane
+ z tą trasą, które sobie pamiętał.
+\end_layout
+
+\begin_layout Subsection
+Uzasanienie
+\end_layout
+
+\begin_layout Standard
+Przy takim projekcie to centralny system dba o to, by w danym momencie były
+ wyświetlane te co trzeba treści.
+ Uet nie dba na przykład o t oco jest reklamą.
+ Jeśli jakaś reklama ma szczęście i wyświetla się zbyt często jest to odpowiedzi
+alnością centralnego systemu to zauważyć i zmniejszyć mu prawdopodobieństwo
+ (lub nic nie robić w takiej sytuacji, to już wybór twórców głownego systemu).
+\end_layout
+
+\begin_layout Standard
+Może się zdarzyć sytuacja, że jest dodana pierwsza treść z prawdopodobieństwem
+ 0 i wówczas jakby nie dodaje się prawdopodobieństwo do 1.
+ Wówczas nic nie wyświetlamy aż nie dostaniemy zmień prawdopodobieńśtwa.
+\end_layout
+
+\begin_layout Standard
+Pamięć urządzenia jest wykorzystywana do trzymania treści oraz wiadomości,
+ które trzeba ponownie wysłać lub wiadomości które otrzymaliśmy, ale jeszcze
+ nie możemy ich obsłużyć, bo na podstawie numerka wiadomości widzimy, że
+ jeszcze była przesłana jakaś wcześńiej wiadomość, która jeszcze nie dotarła.
+ 
+\end_layout
+
+\begin_layout Section
+Model dziedziny UET
+\end_layout
+
+\begin_layout Standard
+Tutaj nie będzie rysunku bo szybciej się pisze.
+\end_layout
+
+\begin_layout Standard
+TreśćVideo - ma nazwę i jest video i ma prawdopodobieńśtwo
+\end_layout
+
+\begin_layout Standard
+TreśćTekstowa - ma nazwę i jest tekstowa i ma prawdopodobieństwo
+\end_layout
+
+\begin_layout Standard
+WyświetlaczVideo - część ekranu telewizora
+\end_layout
+
+\begin_layout Standard
+WyświetlaczText - część ekranu telewizora
+\end_layout
+
+\begin_layout Standard
+Uznaję, że rzeczy jak karta sieciowa urządzenia (robiąca retransmisje oraz
+ szeregująca otrzymane wiadomości)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ to nie jest w modelu dziedzinowym.
+\end_layout
+
+\begin_layout Standard
+i teraz połączenia.
+\end_layout
+
+\begin_layout Standard
+WyświetlaczText wyświetla maksymalnie jedną treść tekstową
+\end_layout
+
+\begin_layout Standard
+WyświetlaczVideo wyświetla maksymalnie jedną treść video.
+\end_layout
+
+\begin_layout Standard
+każda treść tekstowa oraz treść video jest przypisana do dokładnie jednej
+ trasy i ma prawdopodobieńśtwo wyświetlenia.
+\end_layout
+
+\begin_layout Section
+ocena sytuacji
+\end_layout
+
+\begin_layout Standard
+Nie jestem pewien czy rozumiem to polecenie, ale i tak spróbuję.
+\end_layout
+
+\begin_layout Standard
+Z punktu widzenia autobusu nie powinno być problemu.
+ Jest założenie, że pojedyncza treść jest małą.
+ Jednocześnie będzie wyświetlanych prawdopodobnie niewiele reklam lub treści,
+ więc one zmieszczą się w dysku twardym uet.
+ Dodatkowo reklama która będzie transmitowana przez miesiąc lub tydzień
+ musi być wysłana tylko raz na autobus i trasę, więc nie częto.
+ Pozostałe wiadomości (takie nie przesyłające treści) są bardzo małe, bo
+ to po prostu małą wiadomość tekstowa.
+\end_layout
+
+\begin_layout Standard
+Z punktu widzenia serwera może pojawić się problem.
+ Zaprojektowałem system, w którym jeśli chcemy dodać pewną reklamę do wszystkich
+ tras (na tym poziomie opisu nie ma już planów, uet nie wie nic o planach)
+ to musimy wysłać wiadomość do każdej pary autobus, trasa.
+ To może być duża liczba, bo jest dużo autobusów i dużo tras.
+ To może być problem.
+ Można by ten problem (częściowo) naprawić w taki sposób, że ta wiadomość
+ 
+\begin_inset Quotes eld
+\end_inset
+
+nowa treść
+\begin_inset Quotes erd
+\end_inset
+
+ z centrali do uet zawiera od razu listę tras których ta nowa treść się
+ tyczy.
+ Do tej listy dołaczona być musi też lista jako jakie numery bieżące wiadomości
+ te dodania nowej treści należy rozpatrzyć, co jest szczegółem technicznym.
+ To ja może nie będę poprawiał tego w punkcie 
+\begin_inset Quotes eld
+\end_inset
+
+komunikacja z uet
+\begin_inset Quotes erd
+\end_inset
+
+, tylko powiem, że to można tak zrobić.
+ Wówczas nowa reklama musi być w najgorszym przypadku wysłana do wszystkich
+ autobusów, ale już tylko raz do autobusu.
+\end_layout
+
+\begin_layout Section
+wdrożenie
+\end_layout
+
+\begin_layout Standard
+W pierwszym 2 tygodniowym etapie będziemy planować system.
+ Musi powstać projekt jedynie części która nas interesuje w tym etapie (aplikacj
+a w urządzeniu android w autobusie z GPS, komponent trzymający chwilowe
+ położenia autobusów i informacje o tym kto prowadzi ten autobus oraz archiwum
+ zawierające wszystkie te informacje, a także api lub aplikacja do czytania
+ z tego archiwum w zależności od potrzeb przedsiębiorstwa), jednakże trzeba
+ zadbać, by można było to rozbudować do pełnego systemu.
+ W szczególności są jakeiś wymagania na niezawodność i skalowalność całego
+ systemu.
+ Wymusza to na nas pewne rozwiązania już w tym etapie.
+\end_layout
+
+\begin_layout Standard
+Na następne 2 miesiące przewidziane są dwa niezależne zadania: programowanie
+ systemu oraz opracowanie narzędzi do przeniesienia dotychczasowych dokumentów
+ do systemu.
+\end_layout
+
+\begin_layout Standard
+Programowanie przez te 2 miesiące możę być metodą scrum.
+ Programiści korzystają z zabawkowych danych spełniających specyfikację
+ projektu baz danych.
+\end_layout
+
+\begin_layout Standard
+Opracowywanie narzędzi do przeniesienia dokumentów do systemu jest zadaniem,
+ które może być trudne lub łatwe w zależności od tego, jakie formaty danych
+ ma przedsiębiorstwo.
+ Jeśli są to dokumenty papierowe to może to wymagać zatrudnienie nie technicznyc
+h ludzi do wyciągnięcia potrzebnych informacji.
+\end_layout
+
+\begin_layout Standard
+Pozostałe 1.25 miesiąca przeznaczone zostaną na testy.
+ Na początku tego etapu powinniśmy mieć aplikację, która zawiera historyczne
+ dane oraz powinna działać zgodnie z specyfikacją, jednakże należy testować
+ tą aplikację, zbierać feedback od pracowników kierowców i analityków.
+ Mała część autobusów zostanie wyposażona w urządzenia gps, kierowcy zostaną
+ nauczeni jak jej używać ( aplikacja powinna być intuicyjna i łatwa do nauczenia
+).
+ Analitycy firmy zostną poproszeni o wykonywanie swojej pracy używając wyproduko
+wanego przez nas archiwum-bazy danych, korzystając z historycznych danych.
+ Jeśli będą oni zadowoleni to prawdopodobnie byli by również zadowoleni
+ na nowych danych, gdyż są to dane w tym samym formacie.
+\end_layout
+
+\begin_layout Standard
+Na tydzień przed końcem odbędą się testy akceptacyjne.
+ Jeśli coś pójdzie nie tak, to liczymy na to, że w tydzień da się to naprawić.
+\end_layout
+
+\end_body
+\end_document
